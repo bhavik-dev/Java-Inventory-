@@ -230,7 +230,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (17,'Asjad Iqbal','Chandigarh','9650786717','aduser1','dbadpass','ADMINISTRATOR'),(18,'Ahan Jaiswal','Delhi','9660654785','stduser1','dbstdpass','EMPLOYEE'),(20,'Trial Admin','Local','9876543210','root','root','ADMINISTRATOR'),(29,'Trial Employee','Local','1122334455','emp1','emp1','EMPLOYEE');
+INSERT INTO `users` VALUES (17,'Bhavik Limbasiya','Chandigarh','9650786717','aduser1','dbadpass','ADMINISTRATOR'),(18,'Priyansh Thakker','Delhi','9660654785','stduser1','dbstdpass','EMPLOYEE'),(19,'Ismat Ara Tanima','Blangladesh','9650786712','supplier1','dbadpass','SUPPLIER'),(20,'Trial Admin','Local','9876543210','root','root','ADMINISTRATOR'),(29,'Trial Employee','Local','1122334455','emp1','emp1','EMPLOYEE'),(30,'Professor Rushdi','Vancouver','9650786712','advisor1','dbadpass','ADVISOR');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

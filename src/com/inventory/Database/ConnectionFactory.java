@@ -43,7 +43,7 @@ public class ConnectionFactory {
             e.printStackTrace();
         }
         username = prop.getProperty("username");
-        password = prop.getProperty("password");
+        password = "mysql";
 
         try {
             Class.forName(driver);

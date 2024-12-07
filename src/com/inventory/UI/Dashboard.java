@@ -41,9 +41,26 @@ public class Dashboard extends javax.swing.JFrame {
         userSelect = userType;
         this.username = username;
         this.userDTO = userDTO;
-        if("EMPLOYEE".equalsIgnoreCase(userType))
-            notForEmployee();
-        currentUserSession();
+        
+        switch(userType) {
+            case "EMPLOYEE":
+                employeeAccess();
+                currentUserSession();
+                break;
+            case "SUPPLIER":
+                supplierAccess();
+                currentUserSession();
+              break;
+            case "ADVISOR":
+              advisorAccess();
+              currentUserSession();
+              break;
+            case "ADMINISTRATOR":
+              administratorAccess();
+              currentUserSession();
+              break;
+            default:
+          }
 
         // Panel Layout set to Card Layout to allow switching between different sections
         displayPanel.setLayout(layout);
@@ -426,11 +443,35 @@ public class Dashboard extends javax.swing.JFrame {
         nameLabel.setText("User: " + userDTO.getFullName() + " ("+userSelect+")");
     }
 
-    // Allows only the ADMINISTRATOR type user to view and manipulate 'Users' and 'User Logs'
-    public void notForEmployee(){
+    // Allows ADMINISTRATOR type user to view and manipulate 'Users' and 'User Logs'
+    public void administratorAccess(){}
+    
+    // Allow EMPLOYEE to edit everythings except Users
+    public void employeeAccess(){
         navPanel.remove(usersButton);
         navPanel.remove(logsButton);
         //navPanel.remove(salesButton);
+    }  
+    
+    // Allow ADVISOR to only view all data but cannot edit any data
+    public void advisorAccess(){
+        navPanel.remove(usersButton);
+        navPanel.remove(logsButton);
+        navPanel.remove(salesButton);
+        navPanel.remove(custButton);
+        navPanel.remove(purchaseButton);
+        navPanel.remove(salesButton);
+    }
+    
+    // Allow SUPPLIER to only view Stock
+    public void supplierAccess(){
+        navPanel.remove(usersButton);
+        navPanel.remove(logsButton);
+        navPanel.remove(salesButton);
+//        navPanel.remove(custButton);
+        navPanel.remove(prodButton);
+        navPanel.remove(purchaseButton);
+        navPanel.remove(suppButton);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

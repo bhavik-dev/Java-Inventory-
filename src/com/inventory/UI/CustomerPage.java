@@ -16,15 +16,15 @@ import java.sql.SQLException;
  * @author asjad
  */
 public class CustomerPage extends javax.swing.JPanel {
-
+    
     /**
      * Creates new form CustomerPage
      */
     public CustomerPage() {
         initComponents();
         loadDataSet();
-    }
-
+          }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
