@@ -46,7 +46,7 @@ This application can be used by any small to mid-sized stores to easily maintain
           <properties>
           <comment>Credentials for the database.</comment>
             <entry key="username">root</entry>
-            <entry key="password">root</entry>
+            <entry key="password">mysql</entry>
           </properties>
         ```
 6. Once these credentials match, the JAR file should execute without any issues provided that you have the minimum JRE.
